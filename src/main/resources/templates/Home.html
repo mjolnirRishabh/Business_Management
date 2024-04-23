@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>TEA : HOME</title>
+
+	<!-- Add viewport meta tag for better responsiveness -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Link to Font Awesome for icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+	<!-- Link to custom CSS files -->
+	<link rel="stylesheet" href="@{/css/Navigation.css}" th:href="@{css/Navigation.css}" />
+	<link rel="stylesheet" href="@{/css/Home.css}" th:href="@{css/Home.css}" />
+</head>
+
+<body>
+<!-- Include navigation bar -->
+<nav th:replace="~{Navigation::navbar()}"></nav>
+
+<!-- Main content section -->
+<div class="main-content">
+	<div class="text">
+		<h1>Welcome to TEA</h1>
+		<h3>Where Quality Meets Innovation!</h3>
+		<p>Explore our wide range of products designed to enhance your life.</p>
+		<a href="/products" class="btn">Explore Products <i class="fas fa-chevron-right"></i></a>
+	</div>
+	<div class="background">
+		<!-- Video background -->
+		<video id="bg-video" src="/Videos/background.mp4" loop autoplay muted></video>
+	</div>
+</div>
+</body>
+
+</html>
